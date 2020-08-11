@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <access origin="*" />
+  
+  <feature name="MsalPlugin">
+    <param name="ios-package" value="MsalPlugin"/>
+    <param name="onload" value="true"/>
+    <preference name="tenantId" value="common"/>
+    <preference name="clientId" value="2bf5463c-d6d5-42a0-be3a-fcbb8261f87a"/>
+  </feature>
+  <feature name="">
+    <param name="ios-package" value=""/>
+  </feature>
+  <feature name="MSALPublicClientApplication">
+    <param name="ios-package" value="MSALPublicClientApplication"/>
+  </feature>
+  <feature name="MSALPublicClientApplicationConfig">
+    <param name="ios-package" value="MSALPublicClientApplicationConfig"/>
+  </feature>
+  <feature name="MSALAccount">
+    <param name="ios-package" value="MSALAccount"/>
+  </feature>
+  <feature name="MSALSilentTokenParameters">
+    <param name="ios-package" value="MSALSilentTokenParameters"/>
+  </feature>
+  <feature name="MSALResult">
+    <param name="ios-package" value="MSALResult"/>
+  </feature>
+  <feature name="MSALWebviewParameters">
+    <param name="ios-package" value="MSALWebviewParameters"/>
+  </feature>
+  <feature name="MSALInteractiveTokenParameters">
+    <param name="ios-package" value="MSALInteractiveTokenParameters"/>
+  </feature>
+  <feature name="MSALError">
+    <param name="ios-package" value="MSALError"/>
+  </feature>
+
+  
+</widget>
