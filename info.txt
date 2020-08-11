@@ -1,0 +1,21 @@
+1. Generate SHA1
+keytool -exportcert -alias yourkeystorealias -keystore C:\xmsbs\poc-ms-adal\file.keystore | "C:\Program Files\OpenSSL-Win64\bin\openssl.exe" sha1 -binary | "C:\Program Files\OpenSSL-Win64\bin\openssl.exe" base64
+
+2. npm install --save cordova-plugin-msal
+
+3. npm install ionic-msal-native --save
+
+3. replace: ./node_modules/cordova-plugin-msal/plugin.xml with .msal/modified-plugin.xml
+    <preference name="TENANT_ID" default="common" />
+    <preference name="CLIENT_ID" default="2bf5463c-d6d5-42a0-be3a-fcbb8261f87a"/>
+    <preference name="KEY_HASH" default="uK2YlwLNDW/bQb02tfSTrF+blQQ=" />
+
+4. Add in androidManifest.xml inside <application>...</application>
+        <activity android:name="com.microsoft.identity.client.BrowserTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="io.ionic.starter" android:path="/uK2YlwLNDW/bQb02tfSTrF+blQQ=" android:scheme="msauth" />
+            </intent-filter>
+        </activity>

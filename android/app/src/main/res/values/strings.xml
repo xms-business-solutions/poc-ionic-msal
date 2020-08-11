@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ionicmsal</string>
+    <string name="title_activity_main">ionicmsal</string>
+    <string name="package_name">cl.xms.ionicmsal</string>
+    <string name="custom_url_scheme">cl.xms.ionicmsal</string>
+</resources>
