@@ -10,12 +10,29 @@ keytool -exportcert -alias yourkeystorealias -keystore C:\xmsbs\poc-ms-adal\file
     <preference name="CLIENT_ID" default="2bf5463c-d6d5-42a0-be3a-fcbb8261f87a"/>
     <preference name="KEY_HASH" default="uK2YlwLNDW/bQb02tfSTrF+blQQ=" />
 
-4. Add in androidManifest.xml inside <application>...</application>
+4. Android: Add in androidManifest.xml inside <application>...</application>
         <activity android:name="com.microsoft.identity.client.BrowserTabActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:host="io.ionic.starter" android:path="/uK2YlwLNDW/bQb02tfSTrF+blQQ=" android:scheme="msauth" />
+                <data android:host="cl.xms.ionicmsal" android:path="/uK2YlwLNDW/bQb02tfSTrF+blQQ=" android:scheme="msauth" />
             </intent-filter>
         </activity>
+
+5. IOS: info.plist add inside CFBundleURLTypes
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>msauth.cl.xms.ionicmsal</string>
+			</array>
+		</dict>
+
+6. IOS: info.plist add before last 2 lines 
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>msauthv2</string>
+    <string>msauthv3</string>
+  </array>

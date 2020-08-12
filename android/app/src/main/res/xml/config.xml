@@ -4,9 +4,9 @@
   
   <feature name="MsalPlugin">
     <param name="android-package" value="com.wrobins.cordova.plugin.MsalPlugin"/>
-    <preference name="tenantId" value="common"/>
-    <preference name="clientId" value="2bf5463c-d6d5-42a0-be3a-fcbb8261f87a"/>
-    <preference name="keyHash" value="uK2YlwLNDW/bQb02tfSTrF+blQQ="/>
+    <preference name="tenantId" value="$TENANT_ID"/>
+    <preference name="clientId" value="$CLIENT_ID"/>
+    <preference name="keyHash" value="$KEY_HASH"/>
   </feature>
 
   
